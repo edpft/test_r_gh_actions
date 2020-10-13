@@ -1,4 +1,3 @@
-library(testthat)
-library(test_r_gh_actions)
-
-test_check("test_r_gh_actions")
+testthat::test_dir(
+  path = glue::glue("{ getwd() }/tests/testthat/")
+  )
