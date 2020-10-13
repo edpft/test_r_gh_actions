@@ -1,3 +1,5 @@
+# set-up ------------------------------------------------------------------
+
 ## Don't save/load user workspace between sessions
 # usethis::use_blank_slate(
 #   scope = "project"
@@ -42,6 +44,11 @@
 #   name = "test_r_gh_actions"
 # )
 
+# usethis::use_github_actions()
+
+# renv::init()
+# renv::update(prompt = FALSE)
+
 # load libraries ---------------------------------------------------------------
 
 library(magrittr)
@@ -73,4 +80,10 @@ processed <-
 saveRDS(
   processed,
   file = glue::glue("{ getwd() }/test.csv")
+)
+
+# capture environment -----------------------------------------------------
+
+renv::snapshot(
+  prompt = FALSE
 )
