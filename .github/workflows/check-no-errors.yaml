@@ -1,0 +1,20 @@
+on: [push]
+
+name: check-no-error
+
+jobs:
+  check-no-error:
+  runs-on: ubuntu-20.04
+  steps:
+    - uses: actions/checkout@v1
+    - uses: r-lib/actions/setup-r@master
+      with:
+        r-version: '4.0.0'
+    - name: Install libcurl
+      run: sudo apt-get install libcurl4-openssl-dev
+    - name: Install renv 0.9.2
+      run: Rscript -e "install.packages('https://cran.r-project.org/src/contrib/renv_0.9.2.tar.gz', repos = NULL, type = 'source')"
+    - name: Restore packages
+      run: Rscript -e "renv::restore()"
+    - name: Test
+      run: Rscript ~/testthat/test-test_r_gh_actions.R
