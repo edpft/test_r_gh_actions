@@ -38,6 +38,10 @@
 #   credentials = credentials
 # )
 
+# usethis::use_test(
+#   name = "test_r_gh_actions"
+# )
+
 # load libraries ---------------------------------------------------------------
 
 library(magrittr)
