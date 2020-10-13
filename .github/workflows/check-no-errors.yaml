@@ -17,4 +17,4 @@ jobs:
       - name: Restore packages
         run: Rscript -e "renv::restore()"
       - name: Test
-        run: Rscript ~/test_r_gh_actions/testthat/test-test_r_gh_actions.R
+        run: Rscript ~/work/test_r_gh_actions/test_r_gh_actions/testthat/test-test_r_gh_actions.R
