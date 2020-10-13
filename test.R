@@ -8,6 +8,36 @@
 #   ignores = c("*.rds", "*.RData", "*.csv", "*.xls*")
 # )
 
+## 
+# usethis::edit_r_profile(
+#   scope = "user"
+# )
+
+## Create and retrieve a GitHub personal access token
+# usethis::browse_github_pat()
+# 
+# usethis::edit_r_environ(
+#   scope = "user"
+# )
+
+# usethis::edit_git_config(
+#   scope = "user"
+# )
+
+# usethis::use_git_config(
+#   scope = "user"
+# )
+
+# credentials <-
+#   git2r::cred_user_pass(
+#     username = "edpft",
+#     password = usethis::github_token()
+#   )
+
+# usethis::use_git_credentials(
+#   credentials = credentials
+# )
+
 # load libraries ---------------------------------------------------------------
 
 library(magrittr)
