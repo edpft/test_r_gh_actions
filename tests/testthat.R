@@ -1,3 +1,3 @@
 testthat::test_dir(
-  path = glue::glue("{ getwd() }/tests/testthat/")
+  path = "~/work/test_r_gh_actions/test_r_gh_actions/tests/testthat/"
   )
